@@ -1,0 +1,17 @@
+C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\prtfapi.exe
+C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\prtfapi.deps.json
+C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\prtfapi.runtimeconfig.json
+C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\prtfapi.runtimeconfig.dev.json
+C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\prtfapi.dll
+C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\ref\prtfapi.dll
+C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\prtfapi.pdb
+C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\Microsoft.AspNetCore.Owin.dll
+C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.AssemblyInfoInputs.cache
+C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.AssemblyInfo.cs
+C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.csproj.CoreCompileInputs.cache
+C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.csproj.CopyComplete
+C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.dll
+C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\ref\prtfapi.dll
+C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.pdb
+C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.genruntimeconfig.cache

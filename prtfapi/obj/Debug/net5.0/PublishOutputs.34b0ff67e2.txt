@@ -1,0 +1,6 @@
+C:\Users\Eric\projects\prtf\bin\Debug\net5.0\publish\prtf.exe
+C:\Users\Eric\projects\prtf\bin\Debug\net5.0\publish\prtf.dll
+C:\Users\Eric\projects\prtf\bin\Debug\net5.0\publish\prtf.deps.json
+C:\Users\Eric\projects\prtf\bin\Debug\net5.0\publish\prtf.runtimeconfig.json
+C:\Users\Eric\projects\prtf\bin\Debug\net5.0\publish\prtf.pdb
+C:\Users\Eric\projects\prtf\bin\Debug\net5.0\publish\Microsoft.AspNetCore.Owin.dll

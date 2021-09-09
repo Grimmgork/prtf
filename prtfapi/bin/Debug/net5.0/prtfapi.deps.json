@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "prtfapi/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Owin": "5.0.8"
+        },
+        "runtime": {
+          "prtfapi.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Owin/5.0.8": {
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Owin.dll": {
+            "assemblyVersion": "5.0.8.0",
+            "fileVersion": "5.0.821.31805"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "prtfapi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Owin/5.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ikd/i2AjDT+jRgFgB7Ph4jE3u1/ho8yj5m1DZxYU+3fFLpnD3xo8LFqwW5RUe6aKJXN6z4MxAx2OjliIRWxVqg==",
+      "path": "microsoft.aspnetcore.owin/5.0.8",
+      "hashPath": "microsoft.aspnetcore.owin.5.0.8.nupkg.sha512"
+    }
+  }
+}

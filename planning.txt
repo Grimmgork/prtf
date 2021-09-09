@@ -1,0 +1,17 @@
+IPriceGetter
+GetLastValue
+
+
+IValue
+timeframe
+max
+endvalue
+startvalue
+min
+
+
+
+cli application
+api
+library (create database, interact with database)
+database

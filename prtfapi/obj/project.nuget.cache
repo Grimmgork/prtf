@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ib2tj4LOErm9fDH1Bus8TH+Vq0/r2aYMpLMcZ2Y2fyfX9uG6kg/0B+JgRNg21xG7ndZjWClYjRIegSqbwh4I0w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Eric\\projects\\prtf\\prtfapi\\prtfapi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Eric\\.nuget\\packages\\microsoft.aspnetcore.owin\\5.0.8\\microsoft.aspnetcore.owin.5.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
