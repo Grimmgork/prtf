@@ -15,5 +15,10 @@ namespace prtf.Controllers
         {
             return Ok($"Transaction {id} !");
         }
+
+        public IActionResult Get()
+        {
+            return Ok("kek!");
+		}
     }
 }

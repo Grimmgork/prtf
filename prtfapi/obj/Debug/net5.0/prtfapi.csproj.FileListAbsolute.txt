@@ -15,3 +15,4 @@ C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.dll
 C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\ref\prtfapi.dll
 C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.pdb
 C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.genruntimeconfig.cache
+C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.csprojAssemblyReference.cache
