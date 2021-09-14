@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.AspNetCore.Mvc;
 
-namespace prtf.Controllers
+namespace prtfapi.Controllers
 {
     public class DefaultController : ControllerBase
     {

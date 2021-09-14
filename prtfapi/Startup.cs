@@ -4,7 +4,7 @@ using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace prtf
+namespace prtfapi
 {
     public class Startup
     {

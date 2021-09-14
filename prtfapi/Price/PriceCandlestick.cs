@@ -4,17 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prtfapi
+namespace prtfapi.Price
 {
-	interface IPriceDataProvider
-	{
-		public PriceCandlestick GetPrice();
-	}
-
 	public struct PriceCandlestick
 	{
 		double max;
 		double min;
+
 		double start;
 		double end;
 
