@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prtfapi.Controllers
+namespace prtfapi.Portfolio
 {
-	class TransactionsController
+	public class TransactionProvider
 	{
+		
 	}
 }

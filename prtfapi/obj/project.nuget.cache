@@ -1,10 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "Ib2tj4LOErm9fDH1Bus8TH+Vq0/r2aYMpLMcZ2Y2fyfX9uG6kg/0B+JgRNg21xG7ndZjWClYjRIegSqbwh4I0w==",
+  "dgSpecHash": "o/7hjI93ErWCCQJ+fHnfIHDLfDdGJBV7etutqFQ4tGovKE96eYmasVNt1+AMr+NWAJCeRbCmyMf5k5g/HIk4gw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Eric\\projects\\prtf\\prtfapi\\prtfapi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Eric\\.nuget\\packages\\microsoft.aspnetcore.owin\\5.0.8\\microsoft.aspnetcore.owin.5.0.8.nupkg.sha512"
+    "C:\\Users\\Eric\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
+    "C:\\Users\\Eric\\.nuget\\packages\\microsoft.aspnetcore.owin\\5.0.8\\microsoft.aspnetcore.owin.5.0.8.nupkg.sha512",
+    "C:\\Users\\Eric\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "C:\\Users\\Eric\\.nuget\\packages\\mongodb.bson\\2.13.1\\mongodb.bson.2.13.1.nupkg.sha512",
+    "C:\\Users\\Eric\\.nuget\\packages\\mongodb.driver\\2.13.1\\mongodb.driver.2.13.1.nupkg.sha512",
+    "C:\\Users\\Eric\\.nuget\\packages\\mongodb.driver.core\\2.13.1\\mongodb.driver.core.2.13.1.nupkg.sha512",
+    "C:\\Users\\Eric\\.nuget\\packages\\mongodb.libmongocrypt\\1.2.2\\mongodb.libmongocrypt.1.2.2.nupkg.sha512",
+    "C:\\Users\\Eric\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Eric\\.nuget\\packages\\sharpcompress\\0.23.0\\sharpcompress.0.23.0.nupkg.sha512",
+    "C:\\Users\\Eric\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Eric\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\Eric\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512"
   ],
   "logs": []
 }

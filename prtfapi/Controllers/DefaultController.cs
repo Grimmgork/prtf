@@ -8,7 +8,7 @@ namespace prtfapi.Controllers
 {
     public class DefaultController : ControllerBase
     {
-        [Route("sayhi/{name}")]
+        [Route("prtf/sayhi/{name}")]
         public IActionResult Get(string name)
         {
             return Ok($"Hello {name} !");

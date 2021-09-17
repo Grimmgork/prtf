@@ -7,28 +7,25 @@ namespace prtfapi
 {
     class Program
     {
-        public static DataProvider provider;    
+        public static DataSentinel provider;    
 
         static void Main(string[] args)
         {
-            Console.WriteLine("                                       /%/   ");
-            Console.WriteLine("                          @@@,.     @@@@&&@%*");
-            Console.WriteLine(" %%%  &@@@.     %%%   #@/%%@@@@&%% %@@@@@&%  ");
-            Console.WriteLine(" @@@@@@@@@@@@,  @@@@@@@@@@&@@@@@@@%&@@@@@@@%/");
-            Console.WriteLine(" @@@%(.  ,@@@#, @@@&#*.... @@@%*    &@@@%,   ");
-            Console.WriteLine(" @@@%(   .@@@%* @@@%(      @@@%*    &@@@%,   ");
-            Console.WriteLine(" @@@@(  @@@@%#, @@@%(      @@@@/ *  &@@@%,   ");
-            Console.WriteLine(" @@@%@@@@@%%(.  @@@%(       *@@@@@%*&@@@%,   ");
-            Console.WriteLine(" @@@%(                                       ");
-            Console.WriteLine("  (%%(                                       ");
-
+            Console.WriteLine("██████╗ ██████╗ ████████╗███████╗");
+            Console.WriteLine("██╔══██╗██╔══██╗╚══██╔══╝██╔════╝");
+            Console.WriteLine("██████╔╝██████╔╝   ██║   █████╗  ");
+            Console.WriteLine("██╔═══╝ ██╔══██╗   ██║   ██╔══╝  ");
+            Console.WriteLine("██║     ██║  ██║   ██║   ██║     ");
+            Console.WriteLine("╚═╝     ╚═╝  ╚═╝   ╚═╝   ╚═╝     ");
             Console.WriteLine();
             Console.WriteLine("A portfolio- tracking RESTFUL API");
             Console.WriteLine("(c) Eric Armbruster");
             Console.WriteLine();
 
-            provider = new DataProvider();
+            provider = new DataSentinel();
 
+            Console.WriteLine();
+            Console.WriteLine("Starting kestrel ...");
             var host = new WebHostBuilder()
             .UseKestrel()
             .UseStartup<Startup>()

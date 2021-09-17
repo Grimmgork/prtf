@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace prtfapi.Controllers
 {
-	class TransactionsController
+	class AssetsController
 	{
 	}
 }

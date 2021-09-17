@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace prtfapi.Price
 {
-	public struct PriceCandlestick
+	public struct PriceProvider
 	{
-		double max;
-		double min;
+		public string assetId;
+		public string path;
+		public bool dbCache;
 
-		double start;
-		double end;
-
-		DateTime endTime;
-
-		string origin;
+		public string[] extendetParameters;
 	}
 }

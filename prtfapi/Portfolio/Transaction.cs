@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace prtfapi.Portfolio
 {
-	public class Transaction
+	public struct Swap
+	{
+
+	}
+
+	public struct Move
 	{
 		
 	}

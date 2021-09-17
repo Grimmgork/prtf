@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prtfapi.Price
+namespace prtfapi.Controllers
 {
-	struct PriceDataProvider
+	class PricesController
 	{
-		public string name;
-		public string path;
-
-		public bool cache;
 	}
 }
