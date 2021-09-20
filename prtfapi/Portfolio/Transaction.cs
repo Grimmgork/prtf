@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace prtfapi.Portfolio
 {
-	public struct Swap
+	public interface ITransaction
 	{
+		public DateTime time { get; }
+	}
 
+	public struct Swap : ITransaction
+	{
+		public DateTime time => throw new NotImplementedException();
 	}
 
 	public struct Move

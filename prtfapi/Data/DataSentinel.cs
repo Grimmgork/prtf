@@ -39,7 +39,7 @@ namespace prtfapi.Data
 			return null;
 		}
 
-		public Transaction[] GetTransactions()
+		public ITransaction[] GetTransactions()
 		{
 			return null;
 		}
