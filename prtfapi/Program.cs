@@ -1,13 +1,17 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using System.Text;
 using System;
+using System.IO;
 using prtfapi.Data;
+using Newtonsoft.Json;
+using MongoDB.Driver;
+using MongoDB.Bson;
 
 namespace prtfapi
 {
     class Program
     {
-        public static DataSentinel provider;    
+        public static Config config;
 
         static void Main(string[] args)
         {
@@ -19,20 +23,43 @@ namespace prtfapi
             Console.WriteLine("╚═╝     ╚═╝  ╚═╝   ╚═╝   ╚═╝     ");
             Console.WriteLine();
             Console.WriteLine("A portfolio- tracking RESTFUL API");
-            Console.WriteLine("(c) Eric Armbruster");
+            Console.WriteLine("by Eric Armbruster");
             Console.WriteLine();
 
-            provider = new DataSentinel();
+            //load config
+            Directory.SetCurrentDirectory(Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).FullName);
+            string configFilePath = Directory.GetCurrentDirectory() + "\\prtfapi.cfg";
+            if (File.Exists(configFilePath))
+            {
+                config = JsonConvert.DeserializeObject<Config>(File.ReadAllText(configFilePath));
+            }
+            else
+            {
+                config = new Config() { dbConnectionString = "mongodb://localhost:27017/portfolio", url="http://0.0.0.0:5000" };
+                File.WriteAllText(configFilePath, JsonConvert.SerializeObject(config));
+                Console.WriteLine("No config found, created a new one!");
+            }
 
-            Console.WriteLine();
+            //connect to database
+            DataSentinel.Connect(config.dbConnectionString, config.dbName);
+            Console.WriteLine("Database authentification successful!");
+
+            //starting REST API
             Console.WriteLine("Starting kestrel ...");
             var host = new WebHostBuilder()
             .UseKestrel()
             .UseStartup<Startup>()
-            .UseUrls(new string[] { "http://0.0.0.0:5000" })
+            .UseUrls(new string[] { config.url })
             .Build();
 
             host.Run();
         }
+    }
+
+    public struct Config
+    {
+        public string dbConnectionString { get; init; }
+        public string url { get; init; }
+        public string dbName { get; init; }
     }
 }

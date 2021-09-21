@@ -20,7 +20,6 @@ namespace prtfapi
             {
                 endpoints.MapControllers();
             });
-            app.UsePathBase(new Microsoft.AspNetCore.Http.PathString("/prtf"));
         }
     }
 }

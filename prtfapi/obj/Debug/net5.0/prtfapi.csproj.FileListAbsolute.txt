@@ -15,7 +15,6 @@ C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.dll
 C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\ref\prtfapi.dll
 C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.pdb
 C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.genruntimeconfig.cache
-C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.csprojAssemblyReference.cache
 C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\DnsClient.dll
 C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\MongoDB.Bson.dll
 C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\MongoDB.Driver.dll
@@ -29,3 +28,4 @@ C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\runtimes\win\native\snappy6
 C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
 C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\Eric\projects\prtf\prtfapi\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
+C:\Users\Eric\projects\prtf\prtfapi\obj\Debug\net5.0\prtfapi.csprojAssemblyReference.cache

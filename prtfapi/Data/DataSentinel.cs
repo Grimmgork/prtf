@@ -7,59 +7,31 @@ using prtfapi.Portfolio;
 using prtfapi.Price;
 using Newtonsoft.Json;
 using MongoDB.Driver;
-using System.IO;
+using System.Security;
 
 namespace prtfapi.Data
 {
 	public class DataSentinel
 	{
-		public Config config;
-		public MongoClient dbClient;
+		private MongoClient mongoClient;
+		private string dbName;
 
-		public DataSentinel()
+		private static DataSentinel singleton = new DataSentinel();
+
+	    private DataSentinel(){ }
+
+		public static void Connect(string connectionString, string name)
 		{
-			Directory.SetCurrentDirectory( Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).FullName );
-			string configFilePath = Directory.GetCurrentDirectory() + "\\config.json";
-			if (File.Exists(configFilePath)) {
-				config = JsonConvert.DeserializeObject<Config>(File.ReadAllText(configFilePath));
+			singleton.dbName = name;
+			singleton.mongoClient = new MongoClient(connectionString.ToString());
+
+			List<string> names = singleton.mongoClient.ListDatabaseNames().ToList(); //check the connection/authenftification
+			if (!names.Contains(name))
+			{
+				throw new Exception($"Database '{name}' not found!");
 			}
-			else{
-				config = new Config() { dbConnectionString = "mongodb://localhost:27017"};
-				File.WriteAllText(configFilePath, JsonConvert.SerializeObject(config));
-				Console.WriteLine("No config found, created a new one!");
-			}
 
-			Console.WriteLine("Config loadet!");
-			Console.WriteLine("Connecting to " + config.dbConnectionString + " ...");
-		}
-
-
-		public PriceCandlestick[] GetPriceData(PriceProvider provider, DateTime start, DateTime end)
-		{	
-			return null;
-		}
-
-		public ITransaction[] GetTransactions()
-		{
-			return null;
-		}
-
-
-
-		public void StorePriceData(PriceCandlestick[] data)
-		{
-			
-		}
-
-		public void StoreTransaction()
-		{
-			
-		}
-
-		
-		public struct Config
-		{
-			public string dbConnectionString { get; init; }
+			//TODO check the structure of the database!
 		}
 	}
 }

@@ -8,11 +8,14 @@ namespace prtfapi.Portfolio
 {
 	public interface ITransaction
 	{
-		public DateTime time { get; }
+		string id { get; }
+		DateTime time { get; }		
 	}
 
 	public struct Swap : ITransaction
 	{
+		public string id => throw new NotImplementedException();
+
 		public DateTime time => throw new NotImplementedException();
 	}
 
