@@ -4,8 +4,7 @@ using System;
 using System.IO;
 using prtfapi.Data;
 using Newtonsoft.Json;
-using MongoDB.Driver;
-using MongoDB.Bson;
+using prtfapi.Portfolio;
 
 namespace prtfapi
 {
@@ -35,13 +34,13 @@ namespace prtfapi
             }
             else
             {
-                config = new Config() { dbConnectionString = "mongodb://localhost:27017/portfolio", url="http://0.0.0.0:5000" };
+                config = new Config() { dbConnectionString = "mongodb://localhost:27017", url="http://0.0.0.0:5000", dbName="portfolio"};
                 File.WriteAllText(configFilePath, JsonConvert.SerializeObject(config));
                 Console.WriteLine("No config found, created a new one!");
             }
 
             //connect to database
-            DataSentinel.Connect(config.dbConnectionString, config.dbName);
+            DataSentinel.ConnectToDatabase(config.dbConnectionString, config.dbName);
             Console.WriteLine("Database authentification successful!");
 
             //starting REST API

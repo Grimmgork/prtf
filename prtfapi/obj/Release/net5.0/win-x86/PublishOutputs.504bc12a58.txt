@@ -1,0 +1,11 @@
+C:\Users\Eric\projects\prtf\prtfapi\bin\Release\net5.0\publish\prtfapi.pdb
+C:\Users\Eric\projects\prtf\prtfapi\bin\Release\net5.0\publish\clrcompression.dll
+C:\Users\Eric\projects\prtf\prtfapi\bin\Release\net5.0\publish\clrjit.dll
+C:\Users\Eric\projects\prtf\prtfapi\bin\Release\net5.0\publish\coreclr.dll
+C:\Users\Eric\projects\prtf\prtfapi\bin\Release\net5.0\publish\mscordaccore.dll
+C:\Users\Eric\projects\prtf\prtfapi\bin\Release\net5.0\publish\aspnetcorev2_inprocess.dll
+C:\Users\Eric\projects\prtf\prtfapi\bin\Release\net5.0\publish\libzstd.dll
+C:\Users\Eric\projects\prtf\prtfapi\bin\Release\net5.0\publish\snappy32.dll
+C:\Users\Eric\projects\prtf\prtfapi\bin\Release\net5.0\publish\snappy64.dll
+C:\Users\Eric\projects\prtf\prtfapi\bin\Release\net5.0\publish\mongocrypt.dll
+C:\Users\Eric\projects\prtf\prtfapi\bin\Release\net5.0\publish\prtfapi.exe
