@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace prtfapi.Controllers
 {
+	[ApiController]
+	[Route("prtf/priceproviders")]
 	public class PricesController : ControllerBase
 	{
 		

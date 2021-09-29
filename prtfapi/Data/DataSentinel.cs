@@ -15,6 +15,7 @@ namespace prtfapi.Data
 	{
 		private MongoClient mongoClient;
 		private IMongoDatabase db;
+		private IMongoCollection<Asset> assets;
 
 		private static DataSentinel singleton = new DataSentinel();
 
@@ -24,25 +25,25 @@ namespace prtfapi.Data
 		{	
 			singleton.mongoClient = new MongoClient(connectionString.ToString());
 			singleton.db = singleton.mongoClient.GetDatabase(dbname);
+			singleton.assets = singleton.db.GetCollection<Asset>("assets");
 		}
 
 		public static void DeleteAsset(string ticker)
 		{
-			ticker = ticker.ToUpper();
-			var filter = Builders<Asset>.Filter.Eq("_id", ticker);
-			singleton.db.GetCollection<Asset>("assets").DeleteOne(filter);
+			var filter = Builders<Asset>.Filter.Eq("_id", ticker.ToLower());
+			singleton.assets.DeleteOne(filter);
 		}
 
 		public static Asset[] GetAssets()
 		{
-			return singleton.db.GetCollection<Asset>("assets").Find(new BsonDocument()).ToList().ToArray();
+			var filter = new BsonDocument();
+			return singleton.assets.Find(filter).ToList().ToArray();
 		}
 
-		public static Asset GetAsset(string asset)
+		public static Asset GetAsset(string ticker)
 		{
-			asset = asset.ToUpper();
-			var filter = Builders<Asset>.Filter.Eq("_id", asset);
-			List<Asset> found = singleton.db.GetCollection<Asset>("assets").Find(filter).ToList();
+			var filter = Builders<Asset>.Filter.Eq("_id", ticker.ToLower());
+			List<Asset> found = singleton.assets.Find(filter).ToList();
 			if (found.Count == 0)
 				return null;
 			return found[0];
@@ -50,8 +51,7 @@ namespace prtfapi.Data
 
 		public static void InsertAsset(Asset asset)
 		{
-			asset.ticker = asset.ticker.ToLower();
-			singleton.db.GetCollection<Asset>("assets").InsertOne(asset);
+			singleton.assets.InsertOne(asset);
 		}
 	}
 }

@@ -9,8 +9,20 @@ namespace prtfapi.Portfolio
 {
 	public class Asset
 	{
+		private string _ticker;
+
 		[BsonId]
-		public string ticker{ get; set; }
+		public string ticker
+		{
+			get
+			{
+				return _ticker;
+			}
+			set
+			{
+				_ticker = value.ToLower();
+			}
+		}
 
 		public string name { get; set; }
 		public string description { get; set; }

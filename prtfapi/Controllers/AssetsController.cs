@@ -15,33 +15,44 @@ namespace prtfapi.Controllers
 	public class AssetsController : ControllerBase
 	{
 		[HttpPost]
-		public ActionResult<Asset> CreateAsset([FromBody] Asset asset)
+		public ActionResult CreateAsset([FromBody] Asset asset)
 		{
 			DataSentinel.InsertAsset(asset);
 			return Created($"assets/{asset.ticker}", asset);
 		}
 
 		[HttpGet]
-		public ActionResult<Asset[]> GetAssets()
+		public ActionResult GetAll()
 		{
 			return Ok(DataSentinel.GetAssets());
 		}
 
 		[HttpGet]
 		[Route("{ticker}")]
-		public ActionResult<Asset> GetAsset(string ticker)
+		public ActionResult Get(string ticker)
 		{
 			Asset asset = DataSentinel.GetAsset(ticker);
 			if (asset == null)
-				return BadRequest("Asset not found!");
+				return NotFound();
 			return Ok(asset);
 		}
 
 		[HttpDelete]
 		[Route("{ticker}")]
-		public ActionResult<string> DeleteAsset(string ticker)
+		public ActionResult Delete(string ticker)
 		{
 			DataSentinel.DeleteAsset(ticker);
+			return Ok();
+		}
+
+		[HttpPut]
+		[Route("{ticker}")]
+		public ActionResult Replace(string ticker, [FromBody] Asset asset)
+		{
+			if (DataSentinel.GetAsset(ticker) == null)
+				return NotFound();
+
+			DataSentinel.InsertAsset(asset);
 			return Ok();
 		}
 	}

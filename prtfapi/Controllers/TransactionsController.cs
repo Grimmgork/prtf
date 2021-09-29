@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace prtfapi.Controllers
 {
+	[ApiController]
+	[Route("prtf/transactions")]
 	public class TransactionsController : ControllerBase
 	{
 		
