@@ -5,29 +5,33 @@ using System.IO;
 using prtfapi.Data;
 using Newtonsoft.Json;
 using prtfapi.Portfolio;
+using System.ServiceProcess;
+
 
 namespace prtfapi
 {
     class Program
     {
         public static Config config;
+        public static readonly string logo =
+                        "██████╗ ██████╗ ████████╗███████╗\n" +
+                        "██╔══██╗██╔══██╗╚══██╔══╝██╔════╝\n" +
+                        "██████╔╝██████╔╝   ██║   █████╗  \n" +
+                        "██╔═══╝ ██╔══██╗   ██║   ██╔══╝  \n" +
+                        "██║     ██║  ██║   ██║   ██║     \n" +
+                        "╚═╝     ╚═╝  ╚═╝   ╚═╝   ╚═╝     \n" +
+                        "\n" +
+                        "A portfolio-tracking RESTFUL API\n" +
+                        "by Eric Armbruster\n";
 
         static void Main(string[] args)
         {
-            Console.WriteLine("██████╗ ██████╗ ████████╗███████╗");
-            Console.WriteLine("██╔══██╗██╔══██╗╚══██╔══╝██╔════╝");
-            Console.WriteLine("██████╔╝██████╔╝   ██║   █████╗  ");
-            Console.WriteLine("██╔═══╝ ██╔══██╗   ██║   ██╔══╝  ");
-            Console.WriteLine("██║     ██║  ██║   ██║   ██║     ");
-            Console.WriteLine("╚═╝     ╚═╝  ╚═╝   ╚═╝   ╚═╝     ");
-            Console.WriteLine();
-            Console.WriteLine("A portfolio- tracking RESTFUL API");
-            Console.WriteLine("by Eric Armbruster");
-            Console.WriteLine();
+            Console.WriteLine(logo);
 
             //load config
             Directory.SetCurrentDirectory(Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).FullName);
-            string configFilePath = Directory.GetCurrentDirectory() + "\\prtfapi.cfg";
+            string configFilePath = Directory.GetCurrentDirectory() + "\\config.json";
+
             if (File.Exists(configFilePath))
             {
                 config = JsonConvert.DeserializeObject<Config>(File.ReadAllText(configFilePath));
@@ -43,7 +47,7 @@ namespace prtfapi
             DataSentinel.ConnectToDatabase(config.dbConnectionString, config.dbName);
             Console.WriteLine("Database authentification successful!");
 
-            //starting REST API
+            //start REST API
             Console.WriteLine("Starting kestrel ...");
             var host = new WebHostBuilder()
             .UseKestrel()
