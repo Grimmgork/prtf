@@ -1,4 +1,0 @@
-C:\Users\Eric\projects\prtf\obj\x64\Release\netcoreapp5\prtf.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Eric\projects\prtf\obj\x64\Release\netcoreapp5\prtf.AssemblyInfoInputs.cache
-C:\Users\Eric\projects\prtf\obj\x64\Release\netcoreapp5\prtf.AssemblyInfo.cs
-C:\Users\Eric\projects\prtf\obj\x64\Release\netcoreapp5\prtf.csproj.CoreCompileInputs.cache
