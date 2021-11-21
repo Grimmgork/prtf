@@ -6,7 +6,7 @@ using prtfapi.Data;
 using Newtonsoft.Json;
 using prtfapi.Portfolio;
 using System.ServiceProcess;
-
+using MongoDB.Driver;
 
 namespace prtfapi
 {
@@ -23,6 +23,8 @@ namespace prtfapi
                         "\n" +
                         "A portfolio-tracking RESTFUL API\n" +
                         "by Eric Armbruster\n";
+                        
+        public static IDataContext dataContext { get; private set; }
 
         static void Main(string[] args)
         {
@@ -44,7 +46,7 @@ namespace prtfapi
             }
 
             //connect to database
-            DataSentinel.ConnectToDatabase(config.dbConnectionString, config.dbName);
+            dataContext = new MongoDataContext(config.dbConnectionString, config.dbName);
             Console.WriteLine("Database authentification successful!");
 
             //start REST API
@@ -54,6 +56,7 @@ namespace prtfapi
             .UseStartup<Startup>()
             .UseUrls(new string[] { config.url })
             .Build();
+
 
             host.Run();
         }

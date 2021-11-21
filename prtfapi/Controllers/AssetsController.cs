@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using prtfapi.Portfolio;
 using prtfapi.Data;
+using System.Linq.Expressions;
 
 namespace prtfapi.Controllers
 {
@@ -14,24 +15,38 @@ namespace prtfapi.Controllers
 	[Route("prtf/assets")]
 	public class AssetsController : ControllerBase
 	{
+		private readonly IRepository<Asset> assets;
+		
+		public AssetsController()
+		{
+			assets = Program.dataContext.GetRepository<Asset>();
+		}
+
 		[HttpPost]
 		public ActionResult CreateAsset([FromBody] Asset asset)
 		{
-			DataSentinel.InsertAsset(asset);
+			assets.Add(asset);
 			return Created($"assets/{asset.ticker}", asset);
 		}
 
 		[HttpGet]
-		public ActionResult GetAll()
+		public ActionResult GetAll([FromQuery] string[] tags, [FromQuery] string ticker, [FromQuery] string name)
 		{
-			return Ok(DataSentinel.GetAssets());
+
+			Expression<Func<Asset, bool>> expression = null;
+
+
+			expression = Expression.And(expression, nameexp);
+
+
+			return Ok(assets.Where(expression));
 		}
 
 		[HttpGet]
 		[Route("{ticker}")]
 		public ActionResult Get(string ticker)
 		{
-			Asset asset = DataSentinel.GetAsset(ticker);
+			Asset asset = assets.WhereOne(i => i.ticker.Equals(ticker));
 			if (asset == null)
 				return NotFound();
 			return Ok(asset);
@@ -41,18 +56,14 @@ namespace prtfapi.Controllers
 		[Route("{ticker}")]
 		public ActionResult Delete(string ticker)
 		{
-			DataSentinel.DeleteAsset(ticker);
+			assets.RemoveWhere(i => i.ticker.Equals(ticker));
 			return Ok();
 		}
 
-		[HttpPut]
-		[Route("{ticker}")]
-		public ActionResult Replace(string ticker, [FromBody] Asset asset)
+		[HttpPatch]
+		public ActionResult Update([FromBody] Asset asset)
 		{
-			if (DataSentinel.GetAsset(ticker) == null)
-				return NotFound();
-
-			DataSentinel.InsertAsset(asset);
+			assets.UpdateOne(a => a.ticker.Equals(asset.ticker), asset);
 			return Ok();
 		}
 	}
