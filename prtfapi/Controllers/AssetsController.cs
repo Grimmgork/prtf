@@ -32,14 +32,7 @@ namespace prtfapi.Controllers
 		[HttpGet]
 		public ActionResult GetAll([FromQuery] string[] tags, [FromQuery] string ticker, [FromQuery] string name)
 		{
-
-			Expression<Func<Asset, bool>> expression = null;
-
-
-			expression = Expression.And(expression, nameexp);
-
-
-			return Ok(assets.Where(expression));
+			return Ok(assets.All());
 		}
 
 		[HttpGet]

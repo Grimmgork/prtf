@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prtfapi.Data
+namespace prtfapi.Data.Mongodb
 {
 	public class MongoDataContext : IDataContext
 	{

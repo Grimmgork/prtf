@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using MongoDB.Driver;
 using prtfapi.Portfolio;
 
-namespace prtfapi.Data
+namespace prtfapi.Data.Mongodb
 {
 	public class MongoRepository<T> : IRepository<T>
 	{

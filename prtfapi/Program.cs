@@ -2,6 +2,7 @@
 using System.Text;
 using System;
 using System.IO;
+using prtfapi.Data.Mongodb;
 using prtfapi.Data;
 using Newtonsoft.Json;
 using prtfapi.Portfolio;
@@ -56,7 +57,6 @@ namespace prtfapi
             .UseStartup<Startup>()
             .UseUrls(new string[] { config.url })
             .Build();
-
 
             host.Run();
         }

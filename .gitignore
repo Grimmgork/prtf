@@ -3,6 +3,7 @@
 *.ini
 *.config
 config.*
+*.json
 
 **/bin/*
 **/obj/*
